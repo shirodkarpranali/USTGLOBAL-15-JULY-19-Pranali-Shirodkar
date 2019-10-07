@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="col-md-4 offset-4 card card-body">
+        <form action="" #taskInfo='ngForm' (ngSubmit)="sendDetails(taskInfo)" method="POST" role="form">
+            <legend>Task</legend>
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="" placeholder="enter task name" name="taskName"
+                    #taskName="ngModel" ngModel required>
+            </div>
+
+
+
+            <button type="submit" class="btn btn-primary">Add task</button>
+        </form>
+    </div>
+</div>
