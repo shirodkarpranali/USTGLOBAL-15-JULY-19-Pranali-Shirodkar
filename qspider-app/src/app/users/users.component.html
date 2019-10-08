@@ -1,0 +1,36 @@
+<div class="container col-md-4 mt-5">
+    <input type="search" class="form-control" [(ngModel)]="search" >
+    <table>
+<thead>
+    <tr>
+        <th>Index</th>
+        <th>Name</th>
+        <th>email-Id</th>
+        <th>mobile no</th>
+        <th>Update</th>
+        <th>Delete</th>
+        
+    </tr>
+</thead>
+<tbody>
+<tr *ngFor='let user of firebaseService.users | filter : search ;index as i'>
+    <td>{{i+1}}</td>
+    <td>{{user.name | titlecase}}</td>
+    <td>{{user.email | reduce : 10 |uppercase}}</td>
+    <td>{{user.phno | currency : 'INR' }}</td>
+    <td>{{date | date | uppercase}}</td>
+    
+    <td>
+        <button class="btn btn-outline-warning"
+        (click)="updateUser(user)">Update</button>
+    </td>
+    <td>
+            <button class="btn btn-outline-danger"
+            (click)="deleteUser(user)">Delete</button>
+        </td>
+</tr>
+
+</tbody>
+
+    </table>
+</div>
