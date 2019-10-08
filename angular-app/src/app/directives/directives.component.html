@@ -1,0 +1,29 @@
+<!-- <ul>
+    <li *ngFor='let i of users'>{{i.location}}</li>
+</ul> -->
+
+<div class="container">
+    <div *ngIf="condition" class="alert alert-success">user removed successfully</div>
+    <table class="table table-hover table-bordered mt-5">
+        <thead class="thead-dark">
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>location</th>
+                <th>delete</th>
+            </tr>
+        </thead>
+        <tbody class="bg-secondary">
+            <tr *ngFor='let i of users'>
+                <td>{{i.id}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.location}}</td>
+                <td><button class="btn btn-outline-danger"(click)='removeUser(i)'>Remove</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div *ngIf='condition'>condition is true</div>
+
+

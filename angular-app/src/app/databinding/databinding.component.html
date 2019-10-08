@@ -1,0 +1,30 @@
+<h1 [class]="textClasses">{{name}}</h1>
+<h1 [class.bg-danger]="redColour" [class.bg-success]="!redColour">{{5+5}}</h1>
+<img [src]="imgURL" alt="">
+<p [style.background]="paragraphStyle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, facere!</p>
+
+<p [style.background]="paragraphStyle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, facere!</p>
+
+<table class="table table-bordered">
+<thead>
+    <th [attr.colspan]="columnspan">Students</th>
+</thead>
+<tbody>
+    <tr>
+        <td>1</td>
+        <td>abc</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>def</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>ghi</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>xyz</td>
+    </tr>
+</tbody>
+</table>
