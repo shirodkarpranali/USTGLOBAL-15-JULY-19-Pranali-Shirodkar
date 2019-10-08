@@ -1,0 +1,21 @@
+<table class="table table-bordered table-hover bg-dark bg-textlight">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>nodeId</th>
+            <th>image</th>
+            <th>body</th>
+        </tr>   
+    </thead>
+    <tbody>
+        <tr *ngFor='let user of apiTable'>
+            <td> {{user.id}} </td>
+            <td> {{user.node_id}} </td>
+            <td >
+                <img src="{{user.avatar_url}}" class="image">
+            </td>
+            <td> {{user.url}} </td>
+        </tr>
+    </tbody>
+
+</table>
