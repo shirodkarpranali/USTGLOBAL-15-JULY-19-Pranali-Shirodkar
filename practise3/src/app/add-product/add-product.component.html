@@ -1,0 +1,25 @@
+<div class="col-md-6 offset-md-3 mt-5">
+    <div class="card card-body">
+        <h1 class="text-center bg-dark text-white">Add Product</h1>
+    <form #form="ngForm" (ngSubmit)="sendProduct(form.value)">
+        <div class="form-group">
+                <input class="form-control" type="text" name="title" ngModel #title="ngModel"
+                 placeholder="Enter Title">
+        </div>
+
+        <div class="form-group">
+                <input class="form-control" type="text" name="imgUrl" ngModel #imgUrl="ngModel"
+                 placeholder="Enter image url">
+        </div>
+
+        <div class="form-group">
+            <input class="form-control" type="text" name="description" cols="30" rows="5" ngModel #description="ngModel"
+            placeholder="description">
+        </div>
+
+    <button type="submit" class="btn btn-outline-success">Add_Product</button>
+</form>
+</div>
+</div>
+
+
