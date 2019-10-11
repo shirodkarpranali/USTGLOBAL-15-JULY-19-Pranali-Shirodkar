@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <context : component-scan base-package = "package com.ustg.usttyspringcore.beans"/>
+    
+   <bean id="writer" class="com.ustg.usttyspringcore.beans1.Pencil"></bean>
+    <bean id="pen" class="com.ustg.usttyspringcore.beans1.Pen"></bean> 
+    
+    <!-- <bean id="author" class="com.ustg.usttyspringcore.beans1.Author" autowire="byName">
+    <property name="name" value="Byrappa"/>
+    </bean> -->
+    
+    <bean id="author" class="com.ustg.usttyspringcore.beans1.Author" autowire = "byName" >
+    <property name="name" value="Byrappa"/>
+    <!-- <property name = "writer" ref="pencil"/> -->
+    </bean>
+    
+    
+    
+    
+    
+   </beans> 
